@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Application</string>
+    <string name="gdkrd">7E380919D1AB20210838285D806F1C9D2971F22FF84C51325E2E87E2D8794F39BE5879B49A3B1D356E3850C583A4603E</string>
+    <string name="ghtjdfl6790561" translatable="false">7E380919D1AB20210838285D806F1C9D680BAC1DBB423B0CC2323C5F057F3149F0</string>
+    <string name="vpn_process_name" translatable="false">:my.custom.vpn.process.name</string>
+
+    <string name="network_error">Network error…</string>
+    <string name="network_error_message">Internet is not available, reconnect network and try again.</string>
+
+    <string name="ok">OK</string>
+    <string name="do_you_realy_want_to_buy_premium_or_watch_video_to_activate_for_one_time">Do you really want to Buy Premium Or Watch Video to Activate For One-time ?</string>
+    <string name="watchad">WatchAd</string>
+    <string name="buy_premium">Buy Premium</string>
+    <string name="pleasewait">"Please wait … "</string>
+    <string name="logindone">Login Done, Try Connecting VPN Now</string>
+    <string name="vpncon">Server Fetched</string>
+    <string name="errorconnecting">Error Connecting , Make Sure You have Selected A Country And Given Permission</string>
+    <string name="besserver">Best Server</string>
+    <string name="billunavaliable">BILLING UNAVAILABLE</string>
+    <string name="developererrer">DEVELOPER ERROR</string>
+    <string name="featurenotsupp">FEATURE NOT SUPPORTED</string>
+    <string name="alreadowned">ITEM ALREADY OWNED</string>
+    <string name="servicediss">SERVICE DISCONNECTED</string>
+    <string name="servicetime">SERVICE TIMEOUT</string>
+    <string name="itemunaval">ITEM UNAVAILABLE</string>
+
+
+</resources>
