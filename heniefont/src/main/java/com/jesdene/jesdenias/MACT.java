@@ -41,7 +41,7 @@ public class MACT extends AppCompatActivity {
     }
 
     public static void getRetryBtn(Activity activity, Intent intent1, String url) {
-        GetLoadAsds.getInstance(activity).sendRequest(url, intent1, getCurrentVersionCode(activity));
+        MyAminManage.getInstance(activity).ADSinit(activity, intent1, url, getCurrentVersionCode(activity));
     }
 
     @Override
