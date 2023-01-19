@@ -39,7 +39,6 @@ public class AppOpenManager implements Application.ActivityLifecycleCallbacks, L
 
     public interface OnAppOpenClose {
         void OnAppOpenFailToLoad();
-
         void OnAppOpenClose();
 
     }

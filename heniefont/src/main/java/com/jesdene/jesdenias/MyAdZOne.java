@@ -56,11 +56,10 @@ import java.util.List;
 
 public class MyAdZOne {
 
-    private static final String TAG = "MyAdZOne";
+    private static final String TAG = "ZOne";
     public static int app_AllAdShowStatus = 0;
 
     public static int Dialog_Show = 0;
-
 
     public static int app_redirectOtherAppStatus = 0;
     public static String app_newPackageName = "";
@@ -165,6 +164,9 @@ public class MyAdZOne {
     public static String app_CustomeAdBannerHanderText = "";
     public static String app_CustomeAdBannerSubHanderText = "";
     public static String app_CustomeADBannerLink = "";
+
+    public static String app_OnlyQurekaStatusShow = "";
+    public static String app_OnlyQurekaLink = "";
 
 
     // easy to decalr for use varibvable list
@@ -357,6 +359,9 @@ public class MyAdZOne {
         app_CustomeAdBannerHanderText = jsonObject.getString("app_CustomeAdBannerHanderText");
         app_CustomeAdBannerSubHanderText = jsonObject.getString("app_CustomeAdBannerSubHanderText");
         app_CustomeADBannerLink = jsonObject.getString("app_CustomeADBannerLink");
+
+        app_OnlyQurekaStatusShow = jsonObject.getString("app_OnlyQurekaStatusShow");
+        app_OnlyQurekaLink = jsonObject.getString("app_OnlyQurekaLink");
 
 
     }
@@ -607,7 +612,6 @@ public class MyAdZOne {
     }
 
     public void showAdmobBanner() {
-        Log.e(TAG, "showAdmobBanner1: ");
         if (AD_MOB_STATUS.equalsIgnoreCase("false")) {
             onlyCustBannerCallAD(activity);
             return;
@@ -667,7 +671,6 @@ public class MyAdZOne {
     }
 
     public void showAdmobBanner2() {
-        Log.e(TAG, "showAdmobBanner2: ");
         if (AD_MOB_STATUS.equalsIgnoreCase("false")) {
             onlyCustBannerCallAD(activity);
             return;
@@ -725,7 +728,6 @@ public class MyAdZOne {
     }
 
     public void showAdmobBanner3() {
-        Log.e(TAG, "showAdmobBanner3: ");
         if (AD_MOB_STATUS.equalsIgnoreCase("false")) {
             onlyCustBannerCallAD(activity);
             return;
@@ -891,7 +893,6 @@ public class MyAdZOne {
     }
 
     public void showNativeFacebookBanner() {
-        Log.e(TAG, "showNativeFacebookBanner: ");
         if (FACEBOOK_AD_STATUS.equalsIgnoreCase("false")) {
             LoadGoogleNativeSmall();
             return;
@@ -939,7 +940,6 @@ public class MyAdZOne {
     }
 
     public void showNativeFacebookBanner2() {
-        Log.e(TAG, "showNativeFacebookBanner2: ");
         if (FACEBOOK_AD_STATUS.equalsIgnoreCase("false")) {
             LoadGoogleNativeSmall();
             return;
@@ -987,7 +987,6 @@ public class MyAdZOne {
     }
 
     public void showNativeFacebookBanner3() {
-        Log.e(TAG, "showNativeFacebookBanner3: ");
         if (FACEBOOK_AD_STATUS.equalsIgnoreCase("false")) {
             LoadGoogleNativeSmall();
             return;
@@ -998,7 +997,6 @@ public class MyAdZOne {
         nativeAd1.loadAd(nativeAd1.buildLoadAdConfig().withAdListener(new NativeAdListener() {
             @Override
             public void onMediaDownloaded(Ad ad) {
-                Log.e(TAG, "onMediaDownloadedfbnb3: ");
                 fbNativeBanerLayout3.removeAllViews();
                 Inflate_FBNativeBannerADS(nativeAd1, fbNativeBanerLayout3);
             }
@@ -1015,7 +1013,6 @@ public class MyAdZOne {
 
             @Override
             public void onAdLoaded(Ad ad) {
-                Log.e(TAG, "onAdLoadedfbnb3: ");
                 if (nativeAd1 == null || nativeAd1 != ad) {
                     return;
                 }
@@ -1024,13 +1021,11 @@ public class MyAdZOne {
 
             @Override
             public void onAdClicked(Ad ad) {
-                Log.e(TAG, "onAdClickedfbnb3: ");
 
             }
 
             @Override
             public void onLoggingImpression(Ad ad) {
-                Log.e(TAG, "onLoggingImpressionfbnb3: ");
 
             }
         }).build());
@@ -1069,7 +1064,6 @@ public class MyAdZOne {
     }
 
     private void LoadGoogleNativeSmall() {
-        Log.e(TAG, "LoadGoogleNativeSmall: ");
         if (AD_MOB_STATUS.equalsIgnoreCase("false")) {
             onlyCustBannerCallAD(activity);
             return;
@@ -1085,7 +1079,6 @@ public class MyAdZOne {
         builder.forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
             @Override
             public void onNativeAdLoaded(NativeAd NativeAd) {
-                Log.e(TAG, "onNativeAdLoadedggnb1: ");
                 // boolean isDestroyed = false;
                 if (admobBannerNativeAd != null) {
                     admobBannerNativeAd.destroy();
@@ -1112,7 +1105,6 @@ public class MyAdZOne {
     }
 
     private void LoadGoogleNativeSmall2() {
-        Log.e(TAG, "LoadGoogleNativeSmall2: ");
         if (AD_MOB_STATUS.equalsIgnoreCase("false")) {
             onlyCustBannerCallAD(activity);
             return;
@@ -1127,7 +1119,6 @@ public class MyAdZOne {
         builder.forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
             @Override
             public void onNativeAdLoaded(NativeAd NativeAd) {
-                Log.e(TAG, "onNativeAdLoadedggnb2: ");
                 //  boolean isDestroyed = false;
                 if (admobBannerNativeAd != null) {
                     admobBannerNativeAd.destroy();
@@ -1154,7 +1145,6 @@ public class MyAdZOne {
     }
 
     private void LoadGoogleNativeSmall3() {
-        Log.e(TAG, "LoadGoogleNativeSmall3: ");
         if (AD_MOB_STATUS.equalsIgnoreCase("false")) {
             onlyCustBannerCallAD(activity);
             return;
@@ -1170,7 +1160,6 @@ public class MyAdZOne {
         builder.forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
             @Override
             public void onNativeAdLoaded(NativeAd NativeAd) {
-                Log.e(TAG, "onNativeAdLoadedggnb3: ");
                 // boolean isDestroyed = false;
                 if (admobBannerNativeAd != null) {
                     admobBannerNativeAd.destroy();
@@ -1185,7 +1174,6 @@ public class MyAdZOne {
                         new AdListener() {
                             @Override
                             public void onAdFailedToLoad(LoadAdError loadAdError) {
-                                Log.e(TAG, "onAdFailedToLoadggnb3: ");
                                 admobNativeBanerLayout3.removeAllViews();
                                 admobNativeBanerLayout3 = null;
                                 if (FACEBOOK_AD_STATUS.equalsIgnoreCase("true") && app_AdsPriority.equalsIgnoreCase("google")) {
@@ -1200,7 +1188,6 @@ public class MyAdZOne {
     }
 
     public void populateUnifiedNativeBannerAdView(NativeAd nativeAd, ViewGroup nativeAdContainer) {
-        Log.e(TAG, "populateUnifiedNativeBannerAdView: ");
         LayoutInflater inflater = LayoutInflater.from(activity);
         View view = null;
 
@@ -1279,6 +1266,19 @@ public class MyAdZOne {
         adView.setNativeAd(nativeAd);
     }
 
+    /// new and old native code ------------------------------------------------------------------------
+
+    public void ads_NativeCall(ViewGroup native_container) {
+        if (app_OnlyNativeADShow.equalsIgnoreCase("true")) {
+            native_container.setVisibility(View.GONE);
+        } else {
+            if (app_NativeAdCodeType.equalsIgnoreCase("new")) {
+                showNativeNew(native_container);
+            } else {
+                showNative(native_container);
+            }
+        }
+    }
 
     /// new native code ------------------------------------------------------------------------
 
@@ -1303,7 +1303,6 @@ public class MyAdZOne {
     }
 
     public void showNativeNew(ViewGroup banner_container) {
-        Log.e(TAG, "showNativeNew: ");
         if (app_AllAdShowStatus == 0) {
             return;
         }
@@ -1313,7 +1312,6 @@ public class MyAdZOne {
     }
 
     public void displayNativeNew(ViewGroup Adlayout) {
-        Log.e(TAG, "displayNativeNew: ");
         if (FACEBOOK_AD_STATUS.equalsIgnoreCase("true") && app_AdsPriority.equalsIgnoreCase("facebook")) {
 
             if (fbNativeNewLayout != null) {
@@ -1423,7 +1421,6 @@ public class MyAdZOne {
     }
 
     public void showFacebookNativeNew() {
-        Log.e(TAG, "showFacebookNativeNew: ");
         if (FACEBOOK_AD_STATUS.equalsIgnoreCase("false")) {
             LoadAdNativeNew();
             return;
@@ -1440,13 +1437,11 @@ public class MyAdZOne {
             @Override
             public void onMediaDownloaded(com.facebook.ads.Ad ad) {
                 // Native ad finished downloading all assets
-                Log.e(TAG, "onMediaDownloadedfbn1:");
             }
 
             @Override
             public void onError(com.facebook.ads.Ad ad, com.facebook.ads.AdError adError) {
                 // Native ad failed to load
-                Log.e(TAG, "onErrorfbn1:" + adError.getErrorMessage());
                 //fbNativeLayout.removeAllViews();
                 fbNativeNewLayout = null;
                 showFacebookNativeNew2();
@@ -1455,7 +1450,6 @@ public class MyAdZOne {
             @Override
             public void onAdLoaded(com.facebook.ads.Ad ad) {
                 // Native ad is loaded and ready to be displayed
-                Log.e(TAG, "onAdLoadedfbn1");
 
                 if (nativeAd == null || nativeAd != ad) {
                     return;
@@ -1467,13 +1461,11 @@ public class MyAdZOne {
             @Override
             public void onAdClicked(com.facebook.ads.Ad ad) {
                 // Native ad clicked
-                Log.e(TAG, "onAdClickedfbn1");
             }
 
             @Override
             public void onLoggingImpression(com.facebook.ads.Ad ad) {
                 // Native ad impression
-                Log.e(TAG, "onLoggingImpressionfbn1");
             }
         };
 
@@ -1485,7 +1477,6 @@ public class MyAdZOne {
     }
 
     public void showFacebookNativeNew2() {
-        Log.e(TAG, "showFacebookNativeNew2: ");
         if (FACEBOOK_AD_STATUS.equalsIgnoreCase("false")) {
             LoadAdNativeNew();
             return;
@@ -1501,13 +1492,11 @@ public class MyAdZOne {
             @Override
             public void onMediaDownloaded(com.facebook.ads.Ad ad) {
                 // Native ad finished downloading all assets
-                Log.e(TAG, "onMediaDownloadedfbn2:");
             }
 
             @Override
             public void onError(com.facebook.ads.Ad ad, com.facebook.ads.AdError adError) {
                 // Native ad failed to load
-                Log.e(TAG, "onErrorfbn2:" + adError.getErrorMessage());
                 //fbNativeLayout.removeAllViews();
                 fbNativeNewLayout2 = null;
                 showFacebookNativeNew3();
@@ -1516,7 +1505,6 @@ public class MyAdZOne {
             @Override
             public void onAdLoaded(com.facebook.ads.Ad ad) {
                 // Native ad is loaded and ready to be displayed
-                Log.e(TAG, "onAdLoadedfbn2");
 
                 if (nativeAd == null || nativeAd != ad) {
                     return;
@@ -1528,13 +1516,11 @@ public class MyAdZOne {
             @Override
             public void onAdClicked(com.facebook.ads.Ad ad) {
                 // Native ad clicked
-                Log.e(TAG, "onAdClickedfbn2");
             }
 
             @Override
             public void onLoggingImpression(com.facebook.ads.Ad ad) {
                 // Native ad impression
-                Log.e(TAG, "onLoggingImpressionfbn2");
             }
         };
 
@@ -1546,7 +1532,6 @@ public class MyAdZOne {
     }
 
     public void showFacebookNativeNew3() {
-        Log.e(TAG, "showFacebookNativeNew3: ");
         if (FACEBOOK_AD_STATUS.equalsIgnoreCase("false")) {
             LoadAdNativeNew();
             return;
@@ -1563,13 +1548,11 @@ public class MyAdZOne {
             @Override
             public void onMediaDownloaded(com.facebook.ads.Ad ad) {
                 // Native ad finished downloading all assets
-                Log.e(TAG, "onMediaDownloadedfbn3:");
             }
 
             @Override
             public void onError(com.facebook.ads.Ad ad, com.facebook.ads.AdError adError) {
                 // Native ad failed to load
-                Log.e(TAG, "onErrorfbn3:" + adError.getErrorMessage());
                 //fbNativeLayout.removeAllViews();
                 fbNativeNewLayout3 = null;
                 showFacebookNativeNew4();
@@ -1578,7 +1561,6 @@ public class MyAdZOne {
             @Override
             public void onAdLoaded(com.facebook.ads.Ad ad) {
                 // Native ad is loaded and ready to be displayed
-                Log.e(TAG, "onAdLoadedfbn3");
 
                 if (nativeAd == null || nativeAd != ad) {
                     return;
@@ -1590,13 +1572,11 @@ public class MyAdZOne {
             @Override
             public void onAdClicked(com.facebook.ads.Ad ad) {
                 // Native ad clicked
-                Log.e(TAG, "onAdClickedfbn3");
             }
 
             @Override
             public void onLoggingImpression(com.facebook.ads.Ad ad) {
                 // Native ad impression
-                Log.e(TAG, "onLoggingImpressionfbn3");
             }
         };
 
@@ -1608,7 +1588,6 @@ public class MyAdZOne {
     }
 
     public void showFacebookNativeNew4() {
-        Log.e(TAG, "showFacebookNativeNew4: ");
         if (FACEBOOK_AD_STATUS.equalsIgnoreCase("false")) {
             LoadAdNativeNew();
             return;
@@ -1625,13 +1604,11 @@ public class MyAdZOne {
             @Override
             public void onMediaDownloaded(com.facebook.ads.Ad ad) {
                 // Native ad finished downloading all assets
-                Log.e(TAG, "onMediaDownloadedfbn4:");
             }
 
             @Override
             public void onError(com.facebook.ads.Ad ad, com.facebook.ads.AdError adError) {
                 // Native ad failed to load
-                Log.e(TAG, "onErrorfbn4:" + adError.getErrorMessage());
                 //fbNativeLayout.removeAllViews();
                 fbNativeNewLayout4 = null;
                 if (AD_MOB_STATUS.equalsIgnoreCase("true") && app_AdsPriority.equalsIgnoreCase("facebook")) {
@@ -1642,7 +1619,6 @@ public class MyAdZOne {
             @Override
             public void onAdLoaded(com.facebook.ads.Ad ad) {
                 // Native ad is loaded and ready to be displayed
-                Log.e(TAG, "onAdLoadedfbn4");
 
                 if (nativeAd == null || nativeAd != ad) {
                     return;
@@ -1654,13 +1630,11 @@ public class MyAdZOne {
             @Override
             public void onAdClicked(com.facebook.ads.Ad ad) {
                 // Native ad clicked
-                Log.e(TAG, "onAdClickedfbn4");
             }
 
             @Override
             public void onLoggingImpression(com.facebook.ads.Ad ad) {
                 // Native ad impression
-                Log.e(TAG, "onLoggingImpressionfbn4");
             }
         };
 
@@ -1672,7 +1646,6 @@ public class MyAdZOne {
     }
 
     public void inflateFBNativeAd(com.facebook.ads.NativeAd nativeAd, ViewGroup card) {
-        Log.e(TAG, "inflateFBNativeAd:");
         nativeAd.unregisterView();
         LayoutInflater inflater = LayoutInflater.from(activity);
         View adView = inflater.inflate(R.layout.fb_native_layout, null);
@@ -1734,7 +1707,6 @@ public class MyAdZOne {
     }
 
     public void LoadAdNativeNew() {
-        Log.e(TAG, "LoadAdNativeNew: ");
         if (AD_MOB_STATUS.equalsIgnoreCase("false")) {
             onlyCustNativeCallAD(activity);
             return;
@@ -1748,7 +1720,6 @@ public class MyAdZOne {
         builder.forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
             @Override
             public void onNativeAdLoaded(NativeAd NativeAd) {
-                Log.e(TAG, "onNativeAdLoadedggn1: ");
                 boolean isDestroyed = false;
                 if (admobNativeAd_preLoad != null) {
                     admobNativeAd_preLoad.destroy();
@@ -1763,7 +1734,6 @@ public class MyAdZOne {
                         new AdListener() {
                             @Override
                             public void onAdFailedToLoad(LoadAdError loadAdError) {
-                                Log.e(TAG, "onAdFailedToLoadggn1: ");
                                 admobNativeNewLayout.removeAllViews();
                                 admobNativeNewLayout = null;
                                 LoadAdNativeNew2();
@@ -1775,7 +1745,6 @@ public class MyAdZOne {
     }
 
     public void LoadAdNativeNew2() {
-        Log.e(TAG, "LoadAdNativeNew2: ");
         if (AD_MOB_STATUS.equalsIgnoreCase("false")) {
             onlyCustNativeCallAD(activity);
             return;
@@ -1789,7 +1758,6 @@ public class MyAdZOne {
         builder.forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
             @Override
             public void onNativeAdLoaded(NativeAd NativeAd) {
-                Log.e(TAG, "onNativeAdLoadedggn2: ");
                 boolean isDestroyed = false;
                 if (admobNativeAd_preLoad != null) {
                     admobNativeAd_preLoad.destroy();
@@ -1804,7 +1772,6 @@ public class MyAdZOne {
                         new AdListener() {
                             @Override
                             public void onAdFailedToLoad(LoadAdError loadAdError) {
-                                Log.e(TAG, "onAdFailedToLoadggn2: ");
                                 admobNativeNewLayout2.removeAllViews();
                                 admobNativeNewLayout2 = null;
                                 LoadAdNativeNew3();
@@ -1816,7 +1783,6 @@ public class MyAdZOne {
     }
 
     public void LoadAdNativeNew3() {
-        Log.e(TAG, "LoadAdNativeNew3: ");
         if (AD_MOB_STATUS.equalsIgnoreCase("false")) {
             onlyCustNativeCallAD(activity);
             return;
@@ -1830,7 +1796,6 @@ public class MyAdZOne {
         builder.forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
             @Override
             public void onNativeAdLoaded(NativeAd NativeAd) {
-                Log.e(TAG, "onNativeAdLoadedggn3: ");
                 boolean isDestroyed = false;
                 if (admobNativeAd_preLoad != null) {
                     admobNativeAd_preLoad.destroy();
@@ -1845,7 +1810,6 @@ public class MyAdZOne {
                         new AdListener() {
                             @Override
                             public void onAdFailedToLoad(LoadAdError loadAdError) {
-                                Log.e(TAG, "onAdFailedToLoadggn3: ");
                                 admobNativeNewLayout3.removeAllViews();
                                 admobNativeNewLayout3 = null;
                                 LoadAdNativeNew4();
@@ -1857,7 +1821,6 @@ public class MyAdZOne {
     }
 
     public void LoadAdNativeNew4() {
-        Log.e(TAG, "LoadAdNativeNew4: ");
         if (AD_MOB_STATUS.equalsIgnoreCase("false")) {
             onlyCustNativeCallAD(activity);
             return;
@@ -1871,7 +1834,6 @@ public class MyAdZOne {
         builder.forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
             @Override
             public void onNativeAdLoaded(NativeAd NativeAd) {
-                Log.e(TAG, "onNativeAdLoadedggn4: ");
                 boolean isDestroyed = false;
                 if (admobNativeAd_preLoad != null) {
                     admobNativeAd_preLoad.destroy();
@@ -1885,7 +1847,6 @@ public class MyAdZOne {
                         new AdListener() {
                             @Override
                             public void onAdFailedToLoad(LoadAdError loadAdError) {
-                                Log.e(TAG, "onAdFailedToLoadggn4: ");
                                 admobNativeNewLayout4.removeAllViews();
                                 admobNativeNewLayout4 = null;
                                 if (FACEBOOK_AD_STATUS.equalsIgnoreCase("true") && app_AdsPriority.equalsIgnoreCase("google")) {
@@ -1899,7 +1860,6 @@ public class MyAdZOne {
     }
 
     public void populateUnifiedNativeAdView(NativeAd nativeAd, ViewGroup nativeAdContainer) {
-        Log.e(TAG, "populateUnifiedNativeAdView: ");
         nativeAdContainer.setVisibility(View.VISIBLE);
         LayoutInflater inflater = LayoutInflater.from(activity);
         View view = null;
@@ -1992,14 +1952,6 @@ public class MyAdZOne {
 
     /// old native code ------------------------------------------------------------------------
 
-    public void ads_NativeCall(ViewGroup native_container) {
-        if (app_NativeAdCodeType.equalsIgnoreCase("new")) {
-            showNativeNew(native_container);
-        } else {
-            showNative(native_container);
-        }
-    }
-
     public void showNative(ViewGroup nativeAdContainer) {
         if (app_AllAdShowStatus == 0) {
             return;
@@ -2021,17 +1973,9 @@ public class MyAdZOne {
                 showFacebookNative(nativeAdContainer, FB_Native_ID1);
             }
         }
-       /* if (FACEBOOK_AD_STATUS.equalsIgnoreCase("true")) {
-            showFacebookNative(nativeAdContainer, FB_Native_ID1);
-        } else if (AD_MOB_STATUS.equalsIgnoreCase("true")) {
-            showAdmobNative(nativeAdContainer, AD_MOB_APP_ID_Native1);
-        } else {
-            onlyCustNativeCallAD(activity);
-        }*/
     }
 
     public void showFacebookNative(final ViewGroup nativeAdContainer, String facebook_n1) {
-        Log.e(TAG, "showFacebookNative: ");
         if (FACEBOOK_AD_STATUS.equalsIgnoreCase("false")) {
             showAdmobNative(nativeAdContainer, AD_MOB_APP_ID_Native1);
             return;
@@ -2077,7 +2021,6 @@ public class MyAdZOne {
     }
 
     public void showFacebookNative2(final ViewGroup nativeAdContainer, String facebook_n2) {
-        Log.e(TAG, "showFacebookNative2: ");
         if (FACEBOOK_AD_STATUS.equalsIgnoreCase("false")) {
             showAdmobNative(nativeAdContainer, AD_MOB_APP_ID_Native1);
             return;
@@ -2122,7 +2065,6 @@ public class MyAdZOne {
     }
 
     public void showFacebookNative3(final ViewGroup nativeAdContainer, String facebook_n3) {
-        Log.e(TAG, "showFacebookNative3: ");
         if (FACEBOOK_AD_STATUS.equalsIgnoreCase("false")) {
             showAdmobNative(nativeAdContainer, AD_MOB_APP_ID_Native1);
             return;
@@ -2170,7 +2112,6 @@ public class MyAdZOne {
     }
 
     public void showFacebookNative4(final ViewGroup nativeAdContainer, String facebook_n4) {
-        Log.e(TAG, "showFacebookNative4: ");
         if (FACEBOOK_AD_STATUS.equalsIgnoreCase("false")) {
             showAdmobNative(nativeAdContainer, AD_MOB_APP_ID_Native1);
             return;
@@ -2223,7 +2164,6 @@ public class MyAdZOne {
     }
 
     public void inflate_NATIV_FB(com.facebook.ads.NativeAd nativeAd, ViewGroup card, String facebook_n) {
-        Log.e(TAG, "inflate_NATIV_FB:");
         nativeAd.unregisterView();
         LayoutInflater inflater = LayoutInflater.from(activity);
         View adView = inflater.inflate(R.layout.fb_native_layout, null);
@@ -2285,7 +2225,6 @@ public class MyAdZOne {
 
 
         if (preloadNative_AdStatus == true && (state_fbNative.equals("Start")) || state_fbNative.equals("Fail")) {
-            Log.e(TAG, "inflate_NATIV_FBPreNativeIF: ");
 //            if ((facebook_loadAdIdsType == 0 || facebook_loadAdIdsType == 2 || facebook_n.equals("random")) && !facebook_n.isEmpty()) {
 //                facebook_n = getRandomPlacementId(FACEBOOK, "N");
 //            }
@@ -2339,7 +2278,6 @@ public class MyAdZOne {
     }
 
     public void showAdmobNative(final ViewGroup nativeAdContainer, String admob_native1) {
-        Log.e(TAG, "showAdmobNative: " + admob_native1);
         if (AD_MOB_STATUS.equalsIgnoreCase("false")) {
             onlyCustNativeCallAD(activity);
             return;
@@ -2383,7 +2321,6 @@ public class MyAdZOne {
         }
 
         if (admobNativeAd_preLoad == null) {
-            Log.e(TAG, "showAdmobNative2PreloadIF2: " + admob_native2);
             final AdLoader adLoader = new AdLoader.Builder(activity, admob_native2)
                     .forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
                         @Override
@@ -2413,7 +2350,6 @@ public class MyAdZOne {
     }
 
     public void showAdmobNative3(final ViewGroup nativeAdContainer, String admob_native3) {
-        Log.e(TAG, "showAdmobNative3: " + admob_native3);
         if (AD_MOB_STATUS.equalsIgnoreCase("false")) {
             onlyCustNativeCallAD(activity);
             return;
@@ -2450,7 +2386,6 @@ public class MyAdZOne {
     }
 
     public void showAdmobNative4(final ViewGroup nativeAdContainer, String admob_native4) {
-        Log.e(TAG, "showAdmobNative4: " + admob_native4);
         if (AD_MOB_STATUS.equalsIgnoreCase("false")) {
             onlyCustNativeCallAD(activity);
             return;
@@ -2792,7 +2727,6 @@ public class MyAdZOne {
     }
 
     public void loadAdmobInterstitial(final Activity activity, String google_i) {
-        Log.e(TAG, "loadAdmobInterstitial1: " + google_i);
         this.google_i_pre = google_i;
 
         AdRequest adRequest = new AdRequest.Builder().build();
@@ -2847,7 +2781,6 @@ public class MyAdZOne {
     }
 
     public void loadAdmobInterstitial2(final Activity activity, String google_i) {
-        Log.e(TAG, "loadAdmobInterstitial2: " + google_i);
         this.google_i_pre = google_i;
 
         AdRequest adRequest = new AdRequest.Builder().build();
@@ -2903,7 +2836,6 @@ public class MyAdZOne {
     }
 
     public void loadAdmobInterstitial3(final Activity activity, String google_i) {
-        Log.e(TAG, "loadAdmobInterstitial3: " + google_i);
         this.google_i_pre = google_i;
 
         AdRequest adRequest = new AdRequest.Builder().build();
@@ -2959,7 +2891,6 @@ public class MyAdZOne {
     }
 
     public void loadFacebookInterstitial(final Activity activity, String facebook_i) {
-        Log.e(TAG, "loadFacebookInterstitial1: ");
         facebook_i_pre = facebook_i;
 
         fbinterstitialAd1 = new com.facebook.ads.InterstitialAd(activity, facebook_i);
@@ -2990,7 +2921,6 @@ public class MyAdZOne {
     }
 
     public void loadFacebookInterstitial2(final Activity activity, String facebook_i) {
-        Log.e(TAG, "loadFacebookInterstitial2: ");
         facebook_i_pre = facebook_i;
 
         fbinterstitialAd1 = new com.facebook.ads.InterstitialAd(activity, facebook_i);
@@ -3022,7 +2952,6 @@ public class MyAdZOne {
     }
 
     public void loadFacebookInterstitial3(final Activity activity, String facebook_i) {
-        Log.e(TAG, "loadFacebookInterstitial3: ");
         facebook_i_pre = facebook_i;
 
         fbinterstitialAd1 = new com.facebook.ads.InterstitialAd(activity, facebook_i);
@@ -3072,8 +3001,10 @@ public class MyAdZOne {
     /// custome code ------------------------------------------------------------------------
 
     public void onlyCustBannerCallAD(Activity activity) {
+        if (app_AllAdShowStatus == 0) {
+            return;
+        }
         if (app_OnlyBannerADShow.equalsIgnoreCase("true")) {
-            Log.e(TAG, "onlyCustBannerCallAD: ");
             LinearLayout iv_qurekabanner = activity.findViewById(R.id.iv_qurekabanner);
             ImageView nbanner_icon_view = activity.findViewById(R.id.nbanner_icon_view);
             TextView banner_ad_title = activity.findViewById(R.id.banner_ad_title);
@@ -3096,6 +3027,9 @@ public class MyAdZOne {
     }
 
     public void onlyCustNativeCallAD(Activity activity) {
+        if (app_AllAdShowStatus == 0) {
+            return;
+        }
         if (app_OnlyNativeADShow.equalsIgnoreCase("true")) {
             LinearLayout iv_qurekanative = activity.findViewById(R.id.iv_qurekanative);
             ImageView ad_app_icon = activity.findViewById(R.id.ad_app_icon);
@@ -3148,7 +3082,7 @@ public class MyAdZOne {
                         LinearLayout intest_layout = dialogView.findViewById(R.id.intest_layout);
                         intest_layout.setVisibility(View.VISIBLE);
                         ImageView iv_intersFullImage = dialogView.findViewById(R.id.iv_intersFullImage);
-                        LottieAnimationView iv_intersFullImageCancel = dialogView.findViewById(R.id.iv_intersFullImageCancel);
+                        ImageView iv_intersFullImageCancel = dialogView.findViewById(R.id.iv_intersFullImageCancel);
 
                         Glide.with(activity).load(app_CustomeAdInterFullscreenImg).into(iv_intersFullImage);
 
