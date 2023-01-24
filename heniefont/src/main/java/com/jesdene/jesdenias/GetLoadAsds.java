@@ -22,6 +22,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -60,8 +61,6 @@ public class GetLoadAsds {
 
 
     public static int vercode;
-
-
 
 
     public GetLoadAsds(Activity activity1) {
@@ -216,7 +215,6 @@ public class GetLoadAsds {
     }
 
     public void Allloadeddarts() {
-
         MyAdZOne.getInstance(activity).loadInterstitialAd(activity);
 
         if (app_BannerPeriority.equalsIgnoreCase("native")) {

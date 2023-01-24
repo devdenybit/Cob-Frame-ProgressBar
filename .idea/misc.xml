@@ -3,11 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/div79/Desktop/New Module/Combo Project/app/src/main/res/layout/activity_m.xml" value="0.346875" />
+        <entry key="..\:/Users/div79/Desktop/New Module/Combo Project/app/src/main/res/layout/activity_m2.xml" value="0.346875" />
+        <entry key="..\:/Users/div79/Desktop/New Module/Combo Project/app/src/main/res/layout/activity_m3.xml" value="0.346875" />
         <entry key="..\:/Users/div79/Desktop/New Module/Combo Project/app/src/main/res/layout/activity_main.xml" value="0.346875" />
         <entry key="..\:/Users/div79/Desktop/New Module/Combo Project/app/src/main/res/layout/activity_main2.xml" value="0.2962962962962963" />
         <entry key="..\:/Users/div79/Desktop/New Module/Combo Project/app/src/main/res/layout/activity_main3.xml" value="0.346875" />
         <entry key="..\:/Users/div79/Desktop/New Module/Combo Project/app/src/main/res/layout/activity_main4.xml" value="0.346875" />
+        <entry key="..\:/Users/div79/Desktop/New Module/Combo Project/app/src/main/res/layout/all_our_banner.xml" value="0.346875" />
+        <entry key="..\:/Users/div79/Desktop/New Module/Combo Project/app/src/main/res/layout/all_our_native.xml" value="0.33" />
+        <entry key="..\:/Users/div79/Desktop/New Module/Combo Project/heniefont/src/main/res/layout/all_our_native.xml" value="0.346875" />
         <entry key="..\:/Users/div79/Desktop/New Module/Combo Project/heniefont/src/main/res/layout/cust_ad_interstitial.xml" value="0.3421875" />
+        <entry key="..\:/Users/div79/Desktop/New Module/Combo Project/heniefont/src/main/res/layout/cust_native_layout.xml" value="0.346875" />
       </map>
     </option>
   </component>

@@ -170,10 +170,10 @@ public class MyAminManage {
                             try {
                                 boolean status = response.getBoolean("STATUS");
                                 if (status == true) {
-                                    Log.e("TAG", "JustCallonResponse: ");
+                                    Log.e("TAG", "JustCallonResponse:");
                                     GetLoadAsds.getInstance(activity1).sendRequest(url1, intent1, cversion);
                                 }else{
-                                    Log.e("TAG", "FailCallonResponse: ");
+                                    Log.e("TAG", "FailCallonResponse:");
                                 }
 
 

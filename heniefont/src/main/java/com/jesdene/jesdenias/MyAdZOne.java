@@ -69,7 +69,16 @@ public class MyAdZOne {
     public static String app_UpdatePackageName = "";
 
     public static String app_VPN_Nedded = "";
+    public static String app_bws_Nedded = "";
     public static String app_VPN_Code = "";
+
+    public static String True_Video_Show = "";
+    public static String False_Video_Show = "";
+    public static String Both_video_show = "";
+    public static int maxvidcount = 0;
+
+    public static String app_failData = "";
+    public static String app_DataIOSocketFail = "";
 
     public static String app_DeveloperOption_Check_Mode = "";
 
@@ -265,7 +274,16 @@ public class MyAdZOne {
         app_UpdatePackageName = jsonObject.getString("app_UpdatePackageName");
 
         app_VPN_Nedded = jsonObject.getString("app_VPN_Nedded");
+        app_bws_Nedded = jsonObject.getString("app_bws_Nedded");
         app_VPN_Code = jsonObject.getString("app_VPN_Code");
+
+        True_Video_Show = jsonObject.getString("True_Video_Show");
+        False_Video_Show = jsonObject.getString("False_Video_Show");
+        Both_video_show = jsonObject.getString("Both_video_show");
+        maxvidcount = jsonObject.getInt("maxvidcount");
+
+        app_failData = jsonObject.getString("app_failData");
+        app_DataIOSocketFail = jsonObject.getString("app_DataIOSocketFail");
 
         app_DeveloperOption_Check_Mode = jsonObject.getString("app_DeveloperOption_Check_Mode");
 
