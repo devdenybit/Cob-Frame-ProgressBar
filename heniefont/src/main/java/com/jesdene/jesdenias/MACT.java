@@ -2,12 +2,17 @@ package com.jesdene.jesdenias;
 
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.net.ConnectivityManager;
+import android.net.Network;
+import android.net.NetworkCapabilities;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -42,6 +47,10 @@ public class MACT extends AppCompatActivity {
 
     public static void getRetryBtn(Activity activity, Intent intent1, String url) {
         MyAminManage.getInstance(activity).ADSinit(activity, intent1, url, getCurrentVersionCode(activity));
+
+
+
+
     }
 
     @Override

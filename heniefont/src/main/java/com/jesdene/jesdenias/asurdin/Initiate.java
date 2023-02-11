@@ -1,5 +1,7 @@
 package com.jesdene.jesdenias.asurdin;
 
+import static com.jesdene.jesdenias.MyAdZOne.vpn_Country_To_Connect;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -76,14 +78,21 @@ public class Initiate {
         return initiates;
     }
 
-    public void Initiate_call(Activity activity1, String Access_Token, String Base_auth, String Base_Carrier1) {
+    public void
+    Initiate_call(Activity activity1, String Access_Token, String Base_auth, String Base_Carrier1) {
         activity = activity1;
         A_Token = Access_Token;
         Base_OAuth = Base_auth;
         Base_Carrier = Base_Carrier1;
 
+        if (vpn_Country_To_Connect.equalsIgnoreCase("")) {
+            selectedCountry = "";
+        } else {
+            selectedCountry = vpn_Country_To_Connect;
+        }
+
         try {
-           initHydraSdk(Base_Carrier);
+            initHydraSdk(Base_Carrier);
         } catch (Exception ignored) {
         }
         login(activity);
@@ -126,7 +135,7 @@ public class Initiate {
                 });
             });
         } catch (final Exception ex) {
-            ex.printStackTrace();
+            //  ex.printStackTrace();
             activity.runOnUiThread(() -> {
                 AlertDialog.Builder builder = new AlertDialog.Builder(activity);
                 builder.setTitle(activity.getString(R.string.network_error))
@@ -235,7 +244,7 @@ public class Initiate {
                             @Override
                             public void error(@NonNull VpnException e) {
                                 //connectToVpn(activity);
-                              //  Toast.makeText(activity, " Permission Denied By User", Toast.LENGTH_SHORT).show();
+                                //  Toast.makeText(activity, " Permission Denied By User", Toast.LENGTH_SHORT).show();
                                 changescreen(activity);
                                 //    Toast.makeText(Policy_privacy.this, getResources().getString(R.string.errorconnecting), Toast.LENGTH_LONG).show();
                             }
@@ -314,7 +323,7 @@ public class Initiate {
             });
 
         } catch (final Exception ex) {
-            ex.printStackTrace();
+            // ex.printStackTrace();
             activity.runOnUiThread(() -> {
                 AlertDialog.Builder builder = new AlertDialog.Builder(activity);
                 builder.setTitle(activity.getString(R.string.network_error)).setMessage(ex.getMessage()).setNegativeButton(activity.getString(R.string.ok), (dialog, id) -> {

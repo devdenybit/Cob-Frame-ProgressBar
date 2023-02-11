@@ -148,7 +148,7 @@ public class MyAminManage {
             bytemode = bytemode + "v1/get_app.php";
 
         } catch (Exception e) {
-            e.printStackTrace();
+          //  e.printStackTrace();
         }
 
         final String sdfsdf;
@@ -164,7 +164,6 @@ public class MyAminManage {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response1) {
-                        Log.e("TAG", "onResponse: " );
                         try {
                             JSONObject response = new JSONObject(response1);
                             try {
@@ -178,7 +177,7 @@ public class MyAminManage {
 
 
                             } catch (Exception e) {
-                                e.printStackTrace();
+                               // e.printStackTrace();
                             }
 
 
@@ -259,7 +258,7 @@ public class MyAminManage {
                 return something.replace("+", "*");
             }
         } catch (PackageManager.NameNotFoundException e1) {
-            e1.printStackTrace();
+          //  e1.printStackTrace();
 
         } catch (NoSuchAlgorithmException e) {
             //

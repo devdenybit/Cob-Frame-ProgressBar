@@ -4,10 +4,8 @@
     <string name="ghtjdfl6790561" translatable="false">7E380919D1AB20210838285D806F1C9D680BAC1DBB423B0CC2323C5F057F3149F0</string>
     <string name="akbshaemfvl679056" translatable="false">6C7909FFF74563B38A303A696CDA213A7ECF52E6F7D7A474414A5256EE5E2215CCCDB3321C3F3E48DAF2CF4D6FCCDA2F</string>
     <string name="vpn_process_name" translatable="false">:my.custom.vpn.process.name</string>
-
     <string name="network_error">Network error…</string>
     <string name="network_error_message">Internet is not available, reconnect network and try again.</string>
-
     <string name="ok">OK</string>
     <string name="do_you_realy_want_to_buy_premium_or_watch_video_to_activate_for_one_time">Do you really want to Buy Premium Or Watch Video to Activate For One-time ?</string>
     <string name="watchad">WatchAd</string>

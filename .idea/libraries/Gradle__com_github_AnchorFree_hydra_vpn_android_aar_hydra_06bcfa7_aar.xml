@@ -4,6 +4,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/f1ecc65d090326786e4cc3b68b251b30/transformed/jetified-aar-hydra-06bcfa7/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f1ecc65d090326786e4cc3b68b251b30/transformed/jetified-aar-hydra-06bcfa7/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f1ecc65d090326786e4cc3b68b251b30/transformed/jetified-aar-hydra-06bcfa7/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/8251a107a83ed448a95e5145569f73ce/transformed/jetified-aar-hydra-06bcfa7/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8251a107a83ed448a95e5145569f73ce/transformed/jetified-aar-hydra-06bcfa7/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8251a107a83ed448a95e5145569f73ce/transformed/jetified-aar-hydra-06bcfa7/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -4,6 +4,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/2882538b36947012674d3a32775014d7/transformed/jetified-Bolts-Android-1.4.2/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/2882538b36947012674d3a32775014d7/transformed/jetified-Bolts-Android-1.4.2/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/2882538b36947012674d3a32775014d7/transformed/jetified-Bolts-Android-1.4.2/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/20a0f1f831930296f06d865d5d9e4c9c/transformed/jetified-Bolts-Android-1.4.2/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/20a0f1f831930296f06d865d5d9e4c9c/transformed/jetified-Bolts-Android-1.4.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/20a0f1f831930296f06d865d5d9e4c9c/transformed/jetified-Bolts-Android-1.4.2/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

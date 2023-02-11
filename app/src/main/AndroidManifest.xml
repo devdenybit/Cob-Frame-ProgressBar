@@ -3,9 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.jesdene.jesdene">
 
-
     <application
-        android:name="com.jesdene.jesdene.MyApplicationclass"
+        android:name=".MyApplicationclass"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -18,7 +17,7 @@
         tools:targetApi="32">
 
         <activity
-            android:name="com.jesdene.jesdene.MActivity"
+            android:name=".MActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

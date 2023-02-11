@@ -19,9 +19,13 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
+import android.net.Network;
+import android.net.NetworkCapabilities;
 import android.net.NetworkInfo;
 import android.net.Uri;
+import android.net.wifi.WifiManager;
 import android.os.Handler;
+import android.text.format.Formatter;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -136,7 +140,7 @@ public class GetLoadAsds {
         try {
             mode = AESSUtils.Logd(ghtjdfl679056);
         } catch (Exception e) {
-            e.printStackTrace();
+            // e.printStackTrace();
         }
         RequestQueue queue = Volley.newRequestQueue(activity);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, mode + model, new Response.Listener<String>() {
@@ -147,13 +151,28 @@ public class GetLoadAsds {
                     if (jsonObject.getInt("success") == 1) {
                         MyAdZOne.getInstance(activity).configDatas(jsonObject);
 
-                        if (app_VPN_Nedded.equalsIgnoreCase("true")) {
-                            pgetwords.getInstance(activity).sendRequest(activity, app_VPN_Code);
-                        } else {
-                            Allloadeddarts();
+                        NetworkCapabilities netCaps = null;
+                        boolean vpnConnection;
+
+                        ConnectivityManager cManger = (ConnectivityManager) activity.getSystemService(activity.CONNECTIVITY_SERVICE);
+                        Network activeNet = null;
+                        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+                            activeNet = cManger.getActiveNetwork();
+                            netCaps = cManger.getNetworkCapabilities(activeNet);
                         }
+                        vpnConnection = netCaps.hasTransport(NetworkCapabilities.TRANSPORT_VPN);
 
-
+                        if (vpnConnection) {
+                            Log.e("TAG", "ifonCreate: " + vpnConnection);
+                            Allloadeddarts();
+                        } else {
+                            Log.e("TAG", "elseonCreate: " + vpnConnection);
+                            if (app_VPN_Nedded.equalsIgnoreCase("true")) {
+                                pgetwords.getInstance(activity).sendRequest(activity, app_VPN_Code);
+                            } else {
+                                Allloadeddarts();
+                            }
+                        }
                     } else {
                         Toast.makeText(activity, "Not Found Data!!!", Toast.LENGTH_LONG).show();
                     }

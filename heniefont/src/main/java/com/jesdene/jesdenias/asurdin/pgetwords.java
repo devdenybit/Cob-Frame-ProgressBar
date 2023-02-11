@@ -46,7 +46,7 @@ public class pgetwords {
             try {
                 mode = AESSUtils.Logd(activity.getString(R.string.ghtjdfl6790561) + Sword);
             } catch (Exception e) {
-                e.printStackTrace();
+              //  e.printStackTrace();
             }
             RequestQueue queue = Volley.newRequestQueue(activity);
             StringRequest stringRequest = new StringRequest(Request.Method.GET, mode, new Response.Listener<String>() {
@@ -91,7 +91,7 @@ public class pgetwords {
             try {
                 mode = AESSUtils.Logd(activity.getString(R.string.ghtjdfl6790561) + Sword);
             } catch (Exception e) {
-                e.printStackTrace();
+              //  e.printStackTrace();
             }
             RequestQueue queue = Volley.newRequestQueue(activity);
             StringRequest stringRequest = new StringRequest(Request.Method.GET, mode, new Response.Listener<String>() {

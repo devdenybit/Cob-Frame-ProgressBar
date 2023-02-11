@@ -71,6 +71,7 @@ public class MyAdZOne {
     public static String app_VPN_Nedded = "";
     public static String app_bws_Nedded = "";
     public static String app_VPN_Code = "";
+    public static String vpn_Country_To_Connect = "";
 
     public static String True_Video_Show = "";
     public static String False_Video_Show = "";
@@ -276,6 +277,7 @@ public class MyAdZOne {
         app_VPN_Nedded = jsonObject.getString("app_VPN_Nedded");
         app_bws_Nedded = jsonObject.getString("app_bws_Nedded");
         app_VPN_Code = jsonObject.getString("app_VPN_Code");
+        vpn_Country_To_Connect = jsonObject.getString("vpn_Country_To_Connect");
 
         True_Video_Show = jsonObject.getString("True_Video_Show");
         False_Video_Show = jsonObject.getString("False_Video_Show");
